@@ -7,11 +7,10 @@ const app = express();
 
 app.use(express.json());
 
-// Configuração dinâmica do CORS com base na variável de ambiente
 const corsOptions = {
-  origin: process.env.CORS_ORIGIN || '*', // Pega a URL do frontend da variável de ambiente
+  origin: "http://localhost:4173",
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  credentials: true, // Permitir cookies e autenticação
+  credentials: true,
 };
 
 app.use(cors(corsOptions));
